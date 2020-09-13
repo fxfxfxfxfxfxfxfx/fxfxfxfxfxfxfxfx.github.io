@@ -33,4 +33,56 @@
         <tag>health</tag>
       </tags>
   </entry>
+  <entry>
+    <title>基本排序算法</title>
+    <url>/2020/07/29/%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>这些基本的排序算法，都以c++来演示，并且用两个辅助函数来包含排序所需的基本操作。</p>
+<ul>
+<li><code>less()</code>对元素进行比较<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bool less(int a,int b)</span><br><span class="line">&#123;</span><br><span class="line">    return a&lt;&#x3D;b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>exch()</code>将元素交换位置<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void exch(int&amp; a, int&amp; b)</span><br><span class="line">&#123;</span><br><span class="line">	int tem;</span><br><span class="line">	tem &#x3D; a;</span><br><span class="line">	a &#x3D; b;</span><br><span class="line">	b &#x3D; tem;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>show()</code>将数组中的元素打印出来<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void show(vector&lt;int&gt;&amp; a)</span><br><span class="line">&#123;</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; a.size(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; a[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>找到数组中最小的元素，将他和数组的第一个元素交换位置。再次，在剩下的元素中找到最小的元素，将他和数组中的第二个元素交换位置。如此往复，直到将整个数组排序。这种方法叫做“选择”排序，因为它不断地选择剩余元素中最小值。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>union-find算法</title>
+    <url>/2020/07/25/union-find%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h2><p>输入一列整数对，其中每个整数都表示一个某种类型的对象，一对整数p和q可以理解为“p和q是相连的”。我们设定“相连”具有如下性质：</p>
+<ol>
+<li>自反性：p和p相连</li>
+<li>对称性：如果p和q相连，则q和p也相连</li>
+<li>传递性：如果p和q相连且q和r相连，那么p和r也相连</li>
+</ol>
+<p>等价关系能够将对象分为多个等价类，当且仅当两个对象相连时它们才属于一个等价类。我们的目标是编写一个程序来过滤掉序列中所有无意义的整数对。通俗的说，如果输入一个整数对，如果已有的所有整数对可以说明p和q相连，则应该忽略p和q，否则将pq输出，</p>
+<h2 id="问题的应用"><a href="#问题的应用" class="headerlink" title="问题的应用"></a>问题的应用</h2><p>输入的整数可以表示一个大型计算机网络中的一个个节点，而整数对则表示网络中的连接，这个程序可以判定我们是否需要在pq间架设一条新的连接才能进行通信。<br>或者这些整数可以表示社交网络中的人，整数对表示朋友之间的关系。<br>在此类应用中，我们可能需要处理数百万的对象和数十亿的连接，因此对算法的效率有一定的要求。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两数之和</title>
+    <url>/2020/09/13/Leetcode-1/</url>
+    <content><![CDATA[<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target)</span><br><span class="line">    &#123;</span><br><span class="line">        vector&lt;int&gt; tem;</span><br><span class="line">        size_t i,j;</span><br><span class="line">        for(i&#x3D;0;i&lt;nums.size()-1;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            for(j&#x3D;i+1;j&lt;nums.size();j++)</span><br><span class="line">            &#123;</span><br><span class="line">                if(nums[i]+nums[j]&#x3D;&#x3D;target)</span><br><span class="line">                &#123;</span><br><span class="line">                    tem.push_back(i);</span><br><span class="line">                    tem.push_back(j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return tem;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Leetcode每日一题</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
 </search>

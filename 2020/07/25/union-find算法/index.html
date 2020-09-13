@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="算法," />
 
 
 
@@ -86,13 +86,16 @@
 
 
 
-<meta name="description" content="good good study">
-<meta property="og:type" content="website">
-<meta property="og:title" content="fx的小屋">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+<meta name="description" content="问题简述输入一列整数对，其中每个整数都表示一个某种类型的对象，一对整数p和q可以理解为“p和q是相连的”。我们设定“相连”具有如下性质：  自反性：p和p相连 对称性：如果p和q相连，则q和p也相连 传递性：如果p和q相连且q和r相连，那么p和r也相连  等价关系能够将对象分为多个等价类，当且仅当两个对象相连时它们才属于一个等价类。我们的目标是编写一个程序来过滤掉序列中所有无意义的整数对。通俗的说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="union-find算法">
+<meta property="og:url" content="http://yoursite.com/2020/07/25/union-find%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="fx的小屋">
-<meta property="og:description" content="good good study">
+<meta property="og:description" content="问题简述输入一列整数对，其中每个整数都表示一个某种类型的对象，一对整数p和q可以理解为“p和q是相连的”。我们设定“相连”具有如下性质：  自反性：p和p相连 对称性：如果p和q相连，则q和p也相连 传递性：如果p和q相连且q和r相连，那么p和r也相连  等价关系能够将对象分为多个等价类，当且仅当两个对象相连时它们才属于一个等价类。我们的目标是编写一个程序来过滤掉序列中所有无意义的整数对。通俗的说">
+<meta property="article:published_time" content="2020-07-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-07-24T14:36:50.106Z">
 <meta property="article:author" content="FX">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
 
 
@@ -123,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2020/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/25/union-find算法/"/>
 
 
 
 
 
-  <title>归档 | fx的小屋</title>
+  <title>union-find算法 | fx的小屋</title>
   
 
 
@@ -148,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/fxfxfxfxfxfxfxfx" target="_blank" rel="noopener">     
     <img style="position: absolute; top: 0;
@@ -274,185 +277,188 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/25/union-find%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FX">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fx的小屋">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">union-find算法</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-25T00:00:00+08:00">
+                2020-07-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 4 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/09/13/Leetcode-1/" itemprop="url">
-              
-                <span itemprop="name">两数之和</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-09-13T00:00:00+08:00"
-              content="2020-09-13" >
-          09-13
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/07/29/%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" itemprop="url">
-              
-                <span itemprop="name">基本排序算法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-07-29T00:00:00+08:00"
-              content="2020-07-29" >
-          07-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/07/25/union-find%E7%AE%97%E6%B3%95/" itemprop="url">
-              
-                <span itemprop="name">union-find算法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-07-25T00:00:00+08:00"
-              content="2020-07-25" >
-          07-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h2><p>输入一列整数对，其中每个整数都表示一个某种类型的对象，一对整数p和q可以理解为“p和q是相连的”。我们设定“相连”具有如下性质：</p>
+<ol>
+<li>自反性：p和p相连</li>
+<li>对称性：如果p和q相连，则q和p也相连</li>
+<li>传递性：如果p和q相连且q和r相连，那么p和r也相连</li>
+</ol>
+<p>等价关系能够将对象分为多个等价类，当且仅当两个对象相连时它们才属于一个等价类。我们的目标是编写一个程序来过滤掉序列中所有无意义的整数对。通俗的说，如果输入一个整数对，如果已有的所有整数对可以说明p和q相连，则应该忽略p和q，否则将pq输出，</p>
+<h2 id="问题的应用"><a href="#问题的应用" class="headerlink" title="问题的应用"></a>问题的应用</h2><p>输入的整数可以表示一个大型计算机网络中的一个个节点，而整数对则表示网络中的连接，这个程序可以判定我们是否需要在pq间架设一条新的连接才能进行通信。<br>或者这些整数可以表示社交网络中的人，整数对表示朋友之间的关系。<br>在此类应用中，我们可能需要处理数百万的对象和数十亿的连接，因此对算法的效率有一定的要求。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/07/22/%E8%87%AA%E8%BA%AB%E5%85%8D%E7%96%AB%E6%80%A7%E8%82%9D%E7%82%8E%E4%B8%93%E5%AE%B6%E5%85%B1%E8%AF%86/" itemprop="url">
-              
-                <span itemprop="name">自身免疫性肝炎诊断和治疗共识</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-07-22T00:00:00+08:00"
-              content="2020-07-22" >
-          07-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/22/%E8%87%AA%E8%BA%AB%E5%85%8D%E7%96%AB%E6%80%A7%E8%82%9D%E7%82%8E%E4%B8%93%E5%AE%B6%E5%85%B1%E8%AF%86/" rel="next" title="自身免疫性肝炎诊断和治疗共识">
+                <i class="fa fa-chevron-left"></i> 自身免疫性肝炎诊断和治疗共识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/07/29/%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="prev" title="基本排序算法">
+                基本排序算法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -460,6 +466,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -480,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -541,6 +560,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题简述"><span class="nav-number">1.</span> <span class="nav-text">问题简述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题的应用"><span class="nav-number">2.</span> <span class="nav-text">问题的应用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -696,6 +731,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
